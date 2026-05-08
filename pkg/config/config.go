@@ -1579,7 +1579,11 @@ func (t *ToolsConfig) IsToolEnabled(name string) bool {
 		return t.WriteFile.Enabled
 	case "mcp":
 		return t.MCP.Enabled
+	case "load_image":
+		return false
+	case "reaction":
+		return false
 	default:
-		return true
+		return false
 	}
 }
